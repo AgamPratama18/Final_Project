@@ -66,8 +66,7 @@
         - product_height_cm: tinggi dimensi barang.
         - product_width_cm: lebar dimensi barang.
         - freight_value: harga jasa pengiriman barang per *quantity*.
-        - 
-        
+
     - **Feature yang dibuat untuk menunjukan analisa dari hasil Data Preprocessing**:
         - distance (Km): jarak antara *seller* dan *costumer*.
         - total_price: *price* x *quantity*.
@@ -80,3 +79,59 @@
         - shipping_time_(days): lama waktu yang dibutuhkan oleh pihak ekspedisi untuk mengirim barang hingga sampai ke pihak *customer* (actual_delivered_date - order_delivered_carrier_date).
         - delivery_time (days): lama waktu pengiriman barang dari order tersebut diterima dan di bayar (*approved*). (actual_delivered_date - order_approved_at)
         - delivery_time/distance: kecepatan pengiriman berdasarkan lama waktu pengiriman/jarak antara *seller* dan customer (delivery_time (days)/distance (Km)).
+        
+**Dalam proyek ini, terdapat 3 tahap yang saya lakukan:**
+- *Data Cleaning & Data Preprocessing* (*Handling Missing Value*, menggabungkan dataset, membuat *feature* baru, *handling duplicate value*)
+- *Exporatory Data Analysis*
+- Membuat model *Machine Learning* untuk membuat prediksi lama pengiriman barang berdasarkan *Feature* yang ada didalam dataset.
+
+## Machine Learning Modeling
+Setelah dilakukan tahap *Data Cleaning & Preprocessing* dan tahap *Exploratory Data Analysis*, lalu dipilih *feature* yang akan digunakan dalam model *machine learning* menggunakan metode statistik dengan *Pearson Correlation*.
+
+Berikut ini adalah langkah yang saya lakukan untuk membuat model *Machine Learning* yang digunakan:
+
+1. Handling outlier pada dependant varible
+2. Feature selection untuk menentukan independent variable
+3. Menentukan model dengan regression model
+4. Tuning model
+5. Melakukan *Cross Validation* untuk menghindari overfitting model
+5. Evaluasi model
+
+Model machine learning yang paling bagus adalah **RandomForestRegressor** dengan nilai
+
+- RMSE Traning = 1.11
+- RMSE Test = 2.05
+- R2_Score Test = 0.99
+- R2_Score Traning = 0.95
+
+## Dashboard
+Saya mengguanakan Flask untuk membuat *dashboard*
+
+**Home**
+<br>
+
+![Home](https://user-images.githubusercontent.com/65010867/93131433-3d5f4000-f6fe-11ea-97d7-725f3688b01a.png)
+
+<br>
+
+**Dataset**
+
+![Dataset](https://user-images.githubusercontent.com/65010867/93131519-68499400-f6fe-11ea-9d75-5ebdd2a65522.png)
+
+<br>
+
+**Data Visualisation**
+
+![Visualisasi](https://user-images.githubusercontent.com/65010867/93131616-9038f780-f6fe-11ea-9039-86a99b041dea.png)
+
+<br>
+
+**Prediction**
+
+![Predict](https://user-images.githubusercontent.com/65010867/93131669-a47cf480-f6fe-11ea-800c-11d24db5454c.png)
+
+<br>
+
+**Result**
+
+![Result](https://user-images.githubusercontent.com/65010867/93131705-b9598800-f6fe-11ea-9dbf-a4fa589633d5.png)
