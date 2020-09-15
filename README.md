@@ -13,11 +13,11 @@
 
 ## Bisnis Problem.
 - Berdasarkan Latar Belakang sebelumnya, penulis memiliki beberapa bisnis problem mengenai **Delivery Performance**, yaitu:
-    - Faktor apa yang mempengaruhi waktu pengiriman?
-    - Faktor apa yang mempengaruhi kecepatan pengiriman?
+    - Bagaimana hubungan faktor yang ada di dataset dengan waktu pengiriman?
+    - Bagaimana hubungan faktor yang ada di dataset kecepatan pengiriman?
     - Seberapa tepat delivery performance dari Olist terhadap waktu estimasi pengiriman?
     - Adakah hubungan antara delivery performance terhadap kepuasan pelanggan?
-    - Seberapa tepat ML yang dibuat penulis untuk menentukan waktu pengiriman (Delivery Time)?
+    - Seberapa tepat ML yang dapat dibuat untuk menentukan waktu pengiriman (Delivery Time)?
     
 ## Dataset
 - Dataset yang digunakan merupakan public dataset yang dikeluarkan oleh Olist dari tahun 2016 – 2018.
